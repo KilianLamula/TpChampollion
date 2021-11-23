@@ -9,7 +9,5 @@ public class UE {
 
     public String getIntitule() {
         return myIntitule;
-    }
-
-    
+    } 
 }
