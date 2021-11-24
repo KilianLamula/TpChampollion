@@ -111,16 +111,16 @@ public class Enseignant extends Personne {
         //On récupère les heures prévues :
         for(Intervention i : lesInterventions){
             if(i.getType()==type && i.getUe()==ue){
-                prevues+=i.getDuree();
+                planifiees+=i.getDuree();
             }
         }
         
         //On récupère les heures planifiées :
         for(ServicePrevu s : servicesPrevus){
             if(s.getUe()==ue){
-                if(type==TypeIntervention.CM) planifiees+=s.getVolumeCM();
-                if(type==TypeIntervention.TD) planifiees+=s.getVolumeTD();
-                if(type==TypeIntervention.TP) planifiees+=s.getVolumeTP();
+                if(type==TypeIntervention.CM) prevues+=s.getVolumeCM();
+                if(type==TypeIntervention.TD) prevues+=s.getVolumeTD();
+                if(type==TypeIntervention.TP) prevues+=s.getVolumeTP();
             }
         }
         
